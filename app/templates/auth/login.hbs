@@ -9,11 +9,13 @@
     <div class="signin_area">
       <div class="login_form">
         <span class="get_going">Get going ...</span><br><br>
-        <input class="input" type="text" placeholder="Enter your username ...">
+
+          {{input type="text" class="input" placeholder="Enter your username ..." value=username}}
         <br>
-        <input class="input" type="password" placeholder="Enter your password ...">
+          {{input type="password" class="input" placeholder="Enter your password ..." value=password}}
         <br><br>
-        <button class="simple_action">Log in </button>
+        <button class="simple_action" {{action authenticate}}>Login</button>
+        
         <span style="float: right;">
         {{#link-to "auth.reset"}} Recover Password {{/link-to}}
         or {{#link-to "auth.signup"}}Signup{{/link-to}}</span>
