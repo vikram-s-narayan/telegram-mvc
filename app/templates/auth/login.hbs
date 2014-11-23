@@ -1,0 +1,23 @@
+
+<div class="login_area">
+  <div class="left_login">
+    <img class="logo" src="/images/telegram-logo.png"/>
+    <div class="vertical_bar"></div>
+  </div>
+  <div class="right_login">
+    <img class="postmark" src="/images/postmark.png">
+    <div class="signin_area">
+      <div class="login_form">
+        <span class="get_going">Get going ...</span><br><br>
+        <input class="input" type="text" placeholder="Enter your username ...">
+        <br>
+        <input class="input" type="password" placeholder="Enter your password ...">
+        <br><br>
+        <button class="simple_action">Log in </button>
+        <span style="float: right;">
+        {{#link-to "auth.reset"}} Recover Password {{/link-to}}
+        or {{#link-to "auth.signup"}}Signup{{/link-to}}</span>
+      </div>
+    </div>
+  </div>
+</div>

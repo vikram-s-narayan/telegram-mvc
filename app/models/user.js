@@ -1,53 +1,47 @@
 import DS from 'ember-data';
 
 var User = DS.Model.extend({
-  username: DS.attr('string'),
-  firstName: DS.attr('string'),
-  lastName: DS.attr('string'),
-
-  fullName: function() {
-    return this.get('firstName') + ' ' + this.get('lastName');
-  }.property('firstName', 'lastName'),
-
+  name: DS.attr('string'),
   email: DS.attr('string'),
   password: DS.attr('string'),
-  photoURL: DS.attr('string'), //where are photos stored? how to construct URL?
+  photoURL: DS.attr('string'),
   posts: DS.hasMany('post'),
-
-  publish: function(){},
-  follow: function(){},
-  unfollow: function(){},
-  repost: function(){}
+  followers: DS.hasMany('user'),
+  following: DS.hasMany('user'),
 
 });
 
 User.reopenClass({
     FIXTURES: [
     {
-      username: "bambooflute",
-      firstName: "John",
-      lastName: "Sengenberger",
+      id: "john",
+      name: "John",
       email: "johns@gmail.com",
-      password: "hashedandsalted",
-      photoURL: "public/assets/images/john.jpg",
-      posts: [
-      {
-        postId: '001',
-        postCreator: "bambooflute",
-        postContent: "Round the rugged rock ...",
-        createdAt: new Date("October 13, 2014 11:13:00")
-      },
-      {
-        postId: '002',
-        postCreator: "bambooflute",
-        postContent: "Ran the ragged rascal!",
-        createdAt: new Date("October 14, 2014 12:30:00")
-      }
-      ]
-
+      password: "johnpassword",
+      photoURL: "/images/john.jpg",
+      posts: [1,2],
+      followers: ["mary"],
+      following: ["mary"]
     },
     {
-
+      id: "sarah",
+      name: "Sarah",
+      email: "sarah@gmail.com",
+      password: "sarahpassword",
+      photoURL: "/images/sarah.jpg",
+      posts: [3,4],
+      followers: ["mary"],
+      following: ["mary","david"]
+    },
+    {
+      id: "mary",
+      name: "Mary",
+      email: "mary@gmail.com",
+      password: "marypassword",
+      photoURL: "/images/mary.jpg",
+      posts: [5,6],
+      followers: ["john", "sarah"],
+      following: ["john", "sarah"]
     }
     ]
 });

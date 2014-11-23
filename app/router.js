@@ -6,16 +6,19 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('createaccount', {path: '/'}, function(){
+  this.resource('auth', {path: '/'}, function(){
+    this.route ('signup', {path: '/'});
     this.route('login');
-    this.route('resetpassword', {path: '/reset_password'});
-    this.route('checkinbox', {path: '/check_inbox'});
+    this.route('reset');
+    this.route('checkinbox');
     });
 
-  this.resource('mystream', {path:'/:user_id'}, function(){  
-  this.route('following', {path: '/:user_id/following'});
-    this.route('posts', {path: '/:user_id/posts'});
-    this.route('followers', {path: '/:user_id/followers'});
+  this.route('mystream');
+
+  this.resource('user', {path: '/:user_id'}, function(){
+    this.route('posts', {path: '/'});
+    this.route('following');
+    this.route('followers');
   });
 });
 
