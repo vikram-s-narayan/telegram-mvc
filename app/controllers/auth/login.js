@@ -5,16 +5,16 @@ var AuthLoginController = Ember.ObjectController.extend({
     authenticate: function(){
       var suppliedUsername = this.get('username');
       var suppliedPassword = this.get('password');
+      var instanceOfThis = this;
       this.store.find('user', suppliedUsername).then(function (user)
       {var userPassword = user.get('password');
       if (userPassword === suppliedPassword){
-         //this.transitionTo('mystream'); does not work because this is undefined inside the promise
-         alert('Password Matches');
+         instanceOfThis.transitionTo('mystream');
         }else {
-         alert('Password Does Not Match');
+         alert('Password does not match. Please try again.');
        }
     }, function(){
-     alert("user not found in system");
+        alert("The user was not found in the system.");
      });
    }
  }

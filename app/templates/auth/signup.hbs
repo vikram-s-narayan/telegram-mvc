@@ -8,13 +8,13 @@
     <div class="signin_area">
       <div class="login_form">
         <span class="get_going">Create your account</span><br><br>
-        <input class="input" type="text" placeholder="Enter your name ...">
+        {{input class="input" type="text" placeholder="Enter your name ..." value=name}}
         <br>
-        <input class="input" type="text" placeholder="Enter your username ...">
+        {{input class="input" type="text" placeholder="Enter your username ..." value=username}}
         <br>
-        <input class="input" type="password" placeholder="Enter your password ...">
+        {{input class="input" type="password" placeholder="Enter your password ..." value=password}}
         <br><br>
-        <button class="simple_action">Sign up</button>
+        <button class="simple_action"{{action saveUser}}>Sign up</button>
         <span style="float: right;">
           {{#link-to "auth.login"}}Login{{/link-to}}</span>
       </div>
