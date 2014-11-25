@@ -13,11 +13,15 @@ var AuthSignupController = Ember.ObjectController.extend({
         username: username,
         password: password
       });
-      user.save();
-      this.transitionTo('/login');
-    }
-  }
-});
+      var var_this = this;
 
+      user.save().then(function() {
+          var_this.transitionTo('/login');
+          },function(reason) {
+            alert(reason);
+          });
+      }
+    }
+  });
 
 export default AuthSignupController;
