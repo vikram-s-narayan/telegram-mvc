@@ -1,8 +1,12 @@
 import Ember from 'ember';
 
-var AuthSignupController = Ember.ObjectController.extend({
+var AuthSignupController = Ember.Controller.extend({
+
+  username: '',
+	password: '',
+
   actions: {
-    saveUser: function(){
+    saveUser: function() {
       var store = this.store;
       var name = this.get('name');
       var username = this.get('username');
@@ -13,10 +17,10 @@ var AuthSignupController = Ember.ObjectController.extend({
         username: username,
         password: password
       });
-      var var_this = this;
 
+      var _this = this;
       user.save().then(function() {
-          var_this.transitionTo('/login');
+          _this.transitionToRoute('/mystream');
           },function(reason) {
             alert(reason);
           });
