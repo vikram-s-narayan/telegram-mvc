@@ -13,6 +13,9 @@ var AuthLoginController = Ember.Controller.extend({
       this.store.find('user', suppliedUsername).then(function (user) {
         var userPassword = user.get('password');
         if (userPassword === suppliedPassword){
+        //set the users name here
+        _this.get('session').set('user', user.get('name'));
+
         _this.transitionToRoute('mystream');
         } else {
          alert('Password does not match. Please try again.');
