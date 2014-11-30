@@ -15,7 +15,7 @@ User.reopenClass({
     FIXTURES: [
     {
       id: "john",
-      name: "John",
+      name: "John Dufflebag",
       email: "johns@gmail.com",
       password: "john",
       //photoURL: "/images/john.jpg",

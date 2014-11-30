@@ -1,1 +1,36 @@
-Welcome to your stream {{session.user}}! <br>
+
+<div class="private_top_bar">
+
+  <div class="private_top_left">
+  {{#link-to "auth.login"}}
+    <img src="/images/home.png"/>
+    <span style="color: grey; a:active: none;">Home</span>
+  {{/link-to}}
+  </div>
+
+  <div class="private_top_middle">
+  {{#link-to "auth.login"}}
+  <img class="logo_top" src="/images/telegram-logo-small.png"/>
+  {{/link-to}}
+  </div>
+
+  <div class="private_top_right">
+    <img class="user_img" src="/images/john.jpg"/>
+    <span style="color: grey;">{{session.user}}</span>
+  </div>
+
+</div>
+<br>
+<div class="make_post">
+  {{textarea value=postContent cols="50" rows="3" class="post_text" maxlength="140"}}
+  <div class="counter_and_button">
+    <span style="float: left; color: grey;"> {{postContent.length}}</span>
+    <button class="publish_post_button" {{action "saveComment"}}>Publish</button><br>
+  </div>
+</div>
+<br><br>
+<div class="post_listing">
+  {{#each post in this}}
+  <div>{{post.postContent}}</div>
+  {{/each}}
+</div>
