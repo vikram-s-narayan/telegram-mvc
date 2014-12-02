@@ -1,7 +1,8 @@
 import DS from 'ember-data';
 
 var Post = DS.Model.extend({
-  postCreator: DS.belongsTo('user'),
+  postCreator: DS.belongsTo('user', {async: true}),
+  //postCreator: DS.attr('string'),
   postContent: DS.attr('string'),
 
   createdAt: DS.attr('date', {

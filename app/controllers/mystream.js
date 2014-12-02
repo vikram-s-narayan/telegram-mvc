@@ -1,6 +1,12 @@
 import Ember from 'ember';
 
 var MystreamController = Ember.ArrayController.extend({
+  postContent: '',
+  charactersRemaining: function(){
+    return 140 - (this.get('postContent') ||
+    '').length;
+}.property('postContent'),
+
   sortProperties: ['createdAt'],
   sortAscending: true,
   actions: {

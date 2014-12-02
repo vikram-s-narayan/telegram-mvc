@@ -5,7 +5,7 @@ var User = DS.Model.extend({
   email: DS.attr('string'),
   password: DS.attr('string'),
   //photoURL: DS.attr('string'),
-  //posts: DS.hasMany('post'),
+  posts: DS.hasMany('post'),
   //followers: DS.hasMany('user'),
   //following: DS.hasMany('user'),
 
@@ -15,31 +15,31 @@ User.reopenClass({
     FIXTURES: [
     {
       id: "john",
-      name: "John Dufflebag",
+      name: "John Donnahue",
       email: "johns@gmail.com",
       password: "john",
       //photoURL: "/images/john.jpg",
-      //posts: [1,2],
+      posts: [1,2],
       //followers: ["mary"],
       //following: ["mary"]
     },
     {
       id: "sarah",
-      name: "Sarah",
+      name: "Sarah Englewood",
       email: "sarah@gmail.com",
       password: "sarah",
       //photoURL: "/images/sarah.jpg",
-      //posts: [3,4],
+      posts: [3,4],
       //followers: ["mary"],
       //following: ["mary","david"]
     },
     {
       id: "mary",
-      name: "Mary",
+      name: "Mary Jane",
       email: "mary@gmail.com",
       password: "mary",
       //photoURL: "/images/mary.jpg",
-      //posts: [5,6],
+      posts: [5,6],
       //followers: ["john", "sarah"],
       //following: ["john", "sarah"]
     }

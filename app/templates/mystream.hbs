@@ -3,8 +3,8 @@
 
   <div class="private_top_left">
   {{#link-to "auth.login"}}
-    <img src="/images/home.png"/>
-    <span style="color: grey; a:active: none;">Home</span>
+    <img style="width: 50px;"src="/images/home.png"/>
+    <div class="top_home_link">Home</div>
   {{/link-to}}
   </div>
 
@@ -16,7 +16,8 @@
 
   <div class="private_top_right">
     <img class="user_img" src="/images/john.jpg"/>
-    <span style="color: grey;">{{session.user}}</span>
+
+    <div class="top_user_name">{{session.user}}</div>
   </div>
 
 </div>
@@ -24,13 +25,24 @@
 <div class="make_post">
   {{textarea value=postContent cols="50" rows="3" class="post_text" maxlength="140"}}
   <div class="counter_and_button">
-    <span style="float: left; color: grey;"> {{postContent.length}}</span>
+    <span style="float: left; color: grey;"> {{charactersRemaining}}</span>
     <button class="publish_post_button" {{action "saveComment"}}>Publish</button><br>
   </div>
 </div>
 <br><br>
+<div class="latest_posts"><center>Latest posts</center></div>
 <div class="post_listing">
-  {{#each post in this}}
-  <div>{{post.postContent}}</div>
-  {{/each}}
+{{#each post in this}}
+  <div style="border-bottom: solid #ddd 1px;">
+    <div style="position: absolute; padding-top: 10px;">
+      <img width="40" src="images/jane.jpg">
+    </div>
+
+    <div style="width: 400px; margin-left: 40px; padding-top: 10px;padding-left: 10px; padding-bottom: 10px;">
+      <b>{{post.postCreator.name}}</b><br>
+      {{post.postContent}}<br><br>
+      2 minutes ago
+    </div>
+  </div>
+{{/each}}
 </div>
