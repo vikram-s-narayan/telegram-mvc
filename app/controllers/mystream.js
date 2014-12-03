@@ -1,14 +1,16 @@
 import Ember from 'ember';
 
+
 var MystreamController = Ember.ArrayController.extend({
+
   postContent: '',
   charactersRemaining: function(){
     return 140 - (this.get('postContent') ||
     '').length;
-}.property('postContent'),
+    }.property('postContent'),
 
   sortProperties: ['createdAt'],
-  sortAscending: true,
+  sortAscending: false,
   actions: {
     saveComment: function() {
       var store = this.store;

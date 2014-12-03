@@ -41,7 +41,7 @@
     <div style="width: 400px; margin-left: 40px; padding-top: 10px;padding-left: 10px; padding-bottom: 10px;">
       <b>{{post.postCreator.name}}</b><br>
       {{post.postContent}}<br><br>
-      2 minutes ago
+      {{ago post.createdAt}}
     </div>
   </div>
 {{/each}}
