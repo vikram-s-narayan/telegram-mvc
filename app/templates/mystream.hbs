@@ -1,27 +1,5 @@
 
-<div class="private_top_bar">
-
-  <div class="private_top_left">
-  {{#link-to "auth.login"}}
-    <img style="width: 50px;"src="/images/home.png"/>
-    <div class="top_home_link">Home</div>
-  {{/link-to}}
-  </div>
-
-  <div class="private_top_middle">
-  {{#link-to "auth.login"}}
-  <img class="logo_top" src="/images/telegram-logo-small.png"/>
-  {{/link-to}}
-  </div>
-
-  <div class="private_top_right">
-    <img class="user_img" src="/images/john.jpg"/>
-
-    <div class="top_user_name">{{session.user}}</div>
-  </div>
-
-</div>
-<br>
+{{nav-bar apples=session}}
 <div class="make_post">
   {{textarea value=postContent cols="50" rows="3" class="post_text" maxlength="140"}}
   <div class="counter_and_button">
