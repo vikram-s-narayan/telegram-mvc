@@ -15,7 +15,7 @@ var MystreamController = Ember.ArrayController.extend({
     saveComment: function() {
       var store = this.store;
       var post = store.createRecord('post',{
-        postCreator: this.get('session.user.name'),
+        postCreator: this.get('session.user.name'),//should be session.user
         postContent: this.get('postContent')
       });
       post.save();

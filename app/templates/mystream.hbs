@@ -1,5 +1,5 @@
 
-{{nav-bar apples=session}}
+{{nav-bar session=session}}
 <div class="make_post">
   {{textarea value=postContent cols="50" rows="3" class="post_text" maxlength="140"}}
   <div class="counter_and_button">
@@ -10,17 +10,7 @@
 <br><br>
 <div class="latest_posts"><center>Latest posts</center></div>
 <div class="post_listing">
-{{#each post in this}}
-  <div style="border-bottom: solid #ddd 1px;">
-    <div style="position: absolute; padding-top: 10px;">
-      <img width="40" src="images/jane.jpg">
-    </div>
-
-    <div style="width: 400px; margin-left: 40px; padding-top: 10px;padding-left: 10px; padding-bottom: 10px;">
-      <b>{{post.postCreator.name}}</b><br>
-      {{post.postContent}}<br><br>
-      {{ago post.createdAt}}
-    </div>
-  </div>
-{{/each}}
+  {{#each post in this}}
+  {{post-listing session=session post=post}}
+  {{/each}}
 </div>
