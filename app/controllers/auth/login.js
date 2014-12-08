@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 var AuthLoginController = Ember.Controller.extend({
-  username: '', //not mandatory. But helps readability.
-  password: '', //not mandatory. But helps readability.
+  username: '', //To understand why - http://emberjs.com/api/classes/Ember.ObjectProxy.html
+  password: '',
 
   actions:{
     authenticate: function() {
@@ -13,9 +13,8 @@ var AuthLoginController = Ember.Controller.extend({
       this.store.find('user', suppliedUsername).then(function (user) {
         var userPassword = user.get('password');
         if (userPassword === suppliedPassword){
-        //set the users name here
-        _this.get('session').set('user', user.get('name'));
-
+        //set the user object here
+        _this.get('session').set('user', user);
         _this.transitionToRoute('mystream');
         } else {
          alert('Password does not match. Please try again.');

@@ -14,10 +14,10 @@ var User = DS.Model.extend({
 User.reopenClass({
     FIXTURES: [
     {
-      id: "john",
+      id: "j",
       name: "John Donnahue",
       email: "johns@gmail.com",
-      password: "john",
+      password: "j",
       //photoURL: "/images/john.jpg",
       posts: [1,2],
       //followers: ["mary"],

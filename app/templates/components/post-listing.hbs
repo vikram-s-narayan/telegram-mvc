@@ -8,5 +8,12 @@
     <b>{{post.postCreator.name}}</b><br>
     {{post.postContent}}<br><br>
     {{ago post.createdAt}}
+    {{#if isAuthor}}
+    <ul style="display: inline-block;">
+      <li>
+        <button class='delete_post' {{action 'deletePost'}}>delete</button>
+      </li>
+    </ul>
+    {{/if}}
   </div>
 </div>

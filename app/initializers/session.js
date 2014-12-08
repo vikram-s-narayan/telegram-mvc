@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 export function initialize(container, app) {
   var Session = Ember.Object.extend({
     user: null,

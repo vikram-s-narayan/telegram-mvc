@@ -2,9 +2,7 @@ import DS from 'ember-data';
 
 var Post = DS.Model.extend({
   postCreator: DS.belongsTo('user', {async: true}),
-  //postCreator: DS.attr('string'),
   postContent: DS.attr('string'),
-
   createdAt: DS.attr('date', {
           defaultValue: function() { return new Date(); }
       }),
@@ -16,13 +14,13 @@ Post.reopenClass({
     FIXTURES: [
     {
       id: 1,
-      postCreator: "john",
+      postCreator: "j",
       postContent: "Round the rugged rock ...",
       createdAt: new Date("October 13, 2014 11:13:00")
     },
     {
       id: 2,
-      postCreator: "john",
+      postCreator: "j",
       postContent: "Ran the ragged rascal!",
       createdAt: new Date("October 14, 2014 12:30:00")
     },

@@ -12,14 +12,16 @@ var MystreamController = Ember.ArrayController.extend({
   sortProperties: ['createdAt'],
   sortAscending: false,
   actions: {
+
     saveComment: function() {
       var store = this.store;
       var post = store.createRecord('post',{
-        postCreator: this.get('session.user.name'),//should be session.user
+        postCreator: this.get('session.user'),
         postContent: this.get('postContent')
       });
       post.save();
     }
+
   }
 
 });
