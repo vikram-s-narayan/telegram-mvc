@@ -20,6 +20,7 @@ Router.map(function() {
     this.route('following');
     this.route('followers');
   });
+  this.route('user/posts');
 });
 
 export default Router;
