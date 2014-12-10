@@ -6,4 +6,4 @@ var UserPostsRoute = Ember.Route.extend({
   }
 });
 
-export default UserPostsRoute
+export default UserPostsRoute;

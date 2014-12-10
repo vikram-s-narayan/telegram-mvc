@@ -1,2 +1,5 @@
-{{post-listing post=post session=session}}
+{{#each post in this}}
+{{post-listing session=session post=post}}
+{{/each}}
+
 {{outlet}}

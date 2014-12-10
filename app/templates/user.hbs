@@ -1,7 +1,10 @@
 {{nav-bar session=session}}
-{{session.user.name}}
+
 <div class="user_profile">
   <img class="user_img_profile" src="/images/john.jpg"/>
+  {{session.user.name}}<br>
+  @{{session.user.id}}
   <button class="follow_action"> Follow </button>
+
 </div>
 {{outlet}}

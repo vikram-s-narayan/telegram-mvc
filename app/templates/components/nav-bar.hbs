@@ -14,9 +14,11 @@
   </div>
 
   <div class="private_top_right">
-    <img class="user_img" src="/images/john.jpg"/>
-
-    <div class="top_user_name">{{session.user.name}}</div>
+    {{#link-to "user.posts" session.user.id}}
+      <img class="user_img" src="/images/john.jpg"/>
+      <div class="top_user_name">{{session.user.name}}
+      </div>
+    {{/link-to}}
   </div>
 
 </div>
