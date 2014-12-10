@@ -1,14 +1,15 @@
 
 <div style="border-bottom: solid #ddd 1px;">
   <div style="position: absolute; padding-top: 10px;">
-
+    {{#link-to 'user.posts' post.postCreator.id}}
     <img width="40" src="images/jane.jpg">
 
   </div>
 
   <div style="width: 400px; margin-left: 40px; padding-top: 10px;padding-left: 10px; padding-bottom: 10px;">
-    <b>{{post.postCreator.name}}</b><br>
 
+    <b>{{post.postCreator.name}}</b><br>
+    {{/link-to}}
     {{post.postContent}}<br><br>
     {{ago post.createdAt}}
     {{#if isAuthor}}

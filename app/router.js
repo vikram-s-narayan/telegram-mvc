@@ -21,6 +21,11 @@ Router.map(function() {
     this.route('followers');
   });
 
+  this.route('user.following');
+  this.route('user/following');
+  this.route('posts.following');
+  this.route('posts/following');
+  this.route('user/followers');
 });
 
 export default Router;

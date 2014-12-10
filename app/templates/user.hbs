@@ -1,10 +1,15 @@
 {{nav-bar session=session}}
 
 <div class="user_profile">
-  <img class="user_img_profile" src="/images/john.jpg"/>
-  {{session.user.name}}<br>
-  @{{session.user.id}}
-  <button class="follow_action"> Follow </button>
+  <img class="user_img_profile" src="/images/john.jpg"/><br>
+  {{user.name}}<br>
+  @{{user.id}}<br>
+  <button class="follow_action"> Follow </button><br>
+  {{#link-to 'user.posts'}}Posts{{/link-to}}
+  {{#link-to 'user.following'}}Following{{/link-to}}
+  {{#link-to 'user.followers'}}Followers{{/link-to}}
 
 </div>
+<div style="margin: 0 auto; width: 200px; padding-top: 10px;">
 {{outlet}}
+</div>
