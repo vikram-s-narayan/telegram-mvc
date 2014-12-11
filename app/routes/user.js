@@ -7,8 +7,8 @@ var UserRoute =
       return Ember.Object.create({
         userId: user.get('id'),
         userName: user.get('name')
-      })
-     })
+      });
+    });
    }
 });
 

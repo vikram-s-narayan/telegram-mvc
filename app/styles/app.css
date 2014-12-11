@@ -84,13 +84,11 @@ body{
   font-size: 22px;
   font-color: #000000;
 }
-
 .login_form{
   position: absolute;
   left: 66px;
   font-size: 13px;
 }
-
 .input{
   width: 250px;
   height: 35px;
@@ -154,12 +152,10 @@ a:visited{
   width: 50px;
   float: left;
 }
-
 .make_post{
   width: 30%;
   margin: 0 auto;
 }
-
 .post_text{
   border-top: none;
   border-right: none;
@@ -230,9 +226,17 @@ a:visited{
   margin-bottom: 5px;
   width: 80px;
 }
-a.active{
+.page_title a:link{
+  text-decoration: none;
+  color: grey;
+  font-size: 20px;
+  padding: 5px;
+}
+.page_title a.active{
   text-decoration: underline;
   color: grey;
+  font-size: 20px;
+  padding: 10px;
 }
 .logout{
   font-size: 10px;
