@@ -230,3 +230,12 @@ a.active{
   text-decoration: underline;
   color: grey;
 }
+.logout{
+  font-size: 10px;
+  color: #0084B2;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+  display: inline-block;
+
+}

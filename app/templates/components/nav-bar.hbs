@@ -21,8 +21,8 @@
       </div>
     {{/link-to}}
   <div>  {{#if session.isAuthenticated}}
-    <button class="delete_post" action "logout">logout<button>
-      {{/if}}
+    <button class="logout" {{action "logout"}}>logout<button>
+        {{/if}}
   </div>
   </div>
 
