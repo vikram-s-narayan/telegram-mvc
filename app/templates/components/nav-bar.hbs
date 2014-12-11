@@ -16,9 +16,14 @@
   <div class="private_top_right">
     {{#link-to "user.posts" session.user.id}}
       <img class="user_img" src="/images/john.jpg"/>
-      <div class="top_user_name">{{session.user.name}}
+      <div class="top_user_name">{{session.user.name}}<br>
+
       </div>
     {{/link-to}}
+  <div>  {{#if session.isAuthenticated}}
+    <button class="delete_post" action "logout">logout<button>
+      {{/if}}
+  </div>
   </div>
 
 </div>
