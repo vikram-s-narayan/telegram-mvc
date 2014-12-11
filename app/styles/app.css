@@ -197,9 +197,16 @@ a:visited{
   font-size: 13px;
   padding-left: 5px;
 }
-.latest_posts{
+.page_title{
   font-size: 22px;
   color: grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: solid #EEEEEE 1px;
+  border-bottom: solid #EEEEEE 1px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 5px;
 }
 .delete_post{
   font-size: 13px;
@@ -212,11 +219,7 @@ a:visited{
 .user_img_profile{
   width: 100px;
 }
-.user_profile{
-  margin: 0 auto;
-  width: 200px;
-  margin-top: 20px;
-}
+
 .follow_action{
   font-size: 13px;
   color: #0084B2;
@@ -224,6 +227,7 @@ a:visited{
   border: #0084B2 1px solid;
   background-color: white;
   margin-left: 10px;
+  margin-bottom: 5px;
   width: 80px;
 }
 a.active{
