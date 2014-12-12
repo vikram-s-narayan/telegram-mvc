@@ -5,7 +5,9 @@ export default Ember.Component.extend({
     logout: function() {
       alert('bye!');
       this.set('session.user', null);
+      this.transitionToRoute('login');
       window.location.reload(true);
+
     }
   }
 });

@@ -3,15 +3,14 @@
 <div>
   <center><img class="user_img_profile" src="/images/john.jpg"/><br>
   <center>
-    <b>{{userName}}</b><br>
-  @{{userId}}</center><br>
+    <b>{{name}}</b><br>
+  @{{id}}</center><br>
   <button class="follow_action"> Follow </button><br>
   <div class="page_title">
     {{#link-to 'user.posts'}}Posts{{/link-to}}
     {{#link-to 'user.following'}}Following{{/link-to}}
     {{#link-to 'user.followers'}}Followers{{/link-to}}
   </div>
-
 </div>
 <div style="margin: 0 auto; width: 500px; padding-top: 10px;">
 {{outlet}}
