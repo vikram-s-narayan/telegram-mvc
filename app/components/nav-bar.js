@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-
-    click: function() {
-      alert('hi');
-      this.send('logout');
+  actions: {
+    logout: function() {
+      this.sendAction('logout');
+    }
   }
 });
