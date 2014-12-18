@@ -9,7 +9,7 @@ var Post = DS.Model.extend({
 
 
 });
-
+/*
 Post.reopenClass({
     FIXTURES: [
     {
@@ -51,5 +51,6 @@ Post.reopenClass({
 
   ]
 });
+*/
 
 export default Post;

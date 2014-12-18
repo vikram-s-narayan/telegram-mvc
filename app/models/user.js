@@ -10,7 +10,7 @@ var User = DS.Model.extend({
   //following: DS.hasMany('user'),
 
 });
-
+/*
 User.reopenClass({
     FIXTURES: [
     {
@@ -45,5 +45,5 @@ User.reopenClass({
     }
     ]
 });
-
+*/
 export default User;
