@@ -19,7 +19,7 @@ var MystreamController = Ember.ArrayController.extend({
         postCreator: this.get('session.user'),
         postContent: this.get('postContent')
       });
-      post.save();
+      post.get('postCreator').then(function() { post.save(); });
     }
 
   }
