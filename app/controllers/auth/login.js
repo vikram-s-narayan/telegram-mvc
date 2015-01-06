@@ -25,6 +25,8 @@ var AuthLoginController = Ember.Controller.extend({
                                function(response) {
                                  console.log(response.statusCode); //403 comes from server
                                  console.log(response.responseText); //Error message as string
+                                 alert(response.statusCode);
+                                 alert(response.responseText);
                                }
                               );
                       }
