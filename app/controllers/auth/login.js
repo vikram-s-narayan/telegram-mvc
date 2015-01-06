@@ -14,16 +14,19 @@ var AuthLoginController = Ember.Controller.extend({
                                 password: suppliedPassword,
                                 operation: 'login'
                               }).then(function(users) {
-                                  if (typeof (users.get('firstObject'))!=="undefined") {
+                                  //if (typeof (users.get('firstObject'))!=="undefined") {
                                   var user = users.get('firstObject');
                                   _this.get('session').set('user', user);
                                   _this.transitionToRoute('mystream');
-                                } else {
-                                  alert("User isn't in system or password doesn't match");
-                                }
-                              });
-
-
+                                //} else {
+                                  //alert("User isn't in system or password doesn't match");
+                                //}
+                              },
+                               function(response) {
+                                 console.log(response.statusCode); //403 comes from server
+                                 console.log(response.responseText); //Error message as string
+                               }
+                              );
                       }
 
                     }
