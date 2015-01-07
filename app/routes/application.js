@@ -5,7 +5,7 @@ export default Ember.Route.extend({
   actions: {
     logout: function() {
       alert('bye!');
-
+      $.get( "/logout" );
       alert('now transitioning to login');
       this.transitionTo('auth.login');
 
@@ -15,6 +15,9 @@ export default Ember.Route.extend({
       alert('now unloading store');
       this.store.unloadAll('post');
       this.store.unloadAll('user');
+
+      alert('now clearing session');
+
     }
   }
 });
