@@ -3,12 +3,12 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   beforeModel: function() {
     var _this = this;
-    var route = _this; //not yet sure why we are setting route to "this"
+    //var route = _this; 
     var promise = _this.store.find('user', {isAuthenticated: true});
     return promise.then(function(users) {
       if (users && users.get('length') > 0) {
         var user = users.get('firstObject');
-        route.set('session.user', user);
+        _this.set('session.user', user);
       }
       return users;
     });
