@@ -13,6 +13,8 @@
     "ember-qunit": "0.1.8",
     "ember-qunit-notifications": "0.0.4",
     "qunit": "~1.15.0",
-    "ember-cli-moment-shim": "~0.0.2"
+    "ember-cli-moment-shim": "~0.0.2",
+    "blueimp-md5": "~1.1.0",
+    "md5": "0.1.0"
   }
 }
