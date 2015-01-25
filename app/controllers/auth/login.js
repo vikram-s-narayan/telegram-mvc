@@ -7,7 +7,7 @@ var AuthLoginController = Ember.Controller.extend({
   actions:{
     authenticate: function() {
       var suppliedUsername = this.get('username');
-      var suppliedPassword = this.get('password');
+      var suppliedPassword = md5(this.get('password'));
       var _this = this;
       this.store.find('user', {
                                 username: suppliedUsername,
