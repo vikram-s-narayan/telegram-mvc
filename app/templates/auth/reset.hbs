@@ -1,7 +1,7 @@
 
 <div class="login_form">
   <span class="get_going">Reset password</span><br><br>
-  <input class="input" type="text" placeholder="Enter your email">
+  {{input type="text" class="input" placeholder="Enter your email ..." value=email}}
   <br><br>
-  <button class="simple_action">Reset password</button>
+  <button class="simple_action" {{action 'passwordReset'}}>Reset password</button>
 </div>

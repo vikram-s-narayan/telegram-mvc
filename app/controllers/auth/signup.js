@@ -11,11 +11,13 @@ var AuthSignupController = Ember.Controller.extend({
       var name = this.get('name');
       var username = this.get('username');
       var password = md5(this.get('password'));
+      var email = this.get('email');
       var user = store.createRecord('user',{
         id: username,
         name: name,
         username: username,
-        password: password
+        password: password,
+        email: email
       });
 
       var _this = this;
