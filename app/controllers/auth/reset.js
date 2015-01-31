@@ -7,11 +7,12 @@ export default Ember.Controller.extend({
       var email = this.get('email');
       var _this = this;
       //because we're asking to find 'user', it goes to users route on server
-      this.store.find('user', {operation: 'passwordReset', email: email}).then(function(user){
-        _this.transitionToRoute('mystream');
-        alert(user);
+      this.store.find('user', {operation: 'passwordReset', email: email}).then(function(users){
+        console.log('about to call on transition');
+        _this.transitionToRoute('auth.checkinbox');
+      }, function(err){
+        console.log(err);
       });
-      alert(email);
     }
   }
 });
