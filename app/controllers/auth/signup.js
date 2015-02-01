@@ -17,7 +17,8 @@ var AuthSignupController = Ember.Controller.extend({
         name: name,
         username: username,
         password: password,
-        email: email
+        email: email,
+        operation: 'signup'
       });
 
       var _this = this;
