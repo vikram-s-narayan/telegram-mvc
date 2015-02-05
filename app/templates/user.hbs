@@ -5,7 +5,7 @@
   <center>
     <b>{{name}}</b><br>
   @{{id}}</center><br>
-  <button class="follow_action"> Follow </button><br>
+  <button class="follow_action" {{action 'follow'}}> Follow </button><br>
   <div class="page_title">
     {{#link-to 'user.posts'}}Posts{{/link-to}}
     {{#link-to 'user.following'}}Following{{/link-to}}
