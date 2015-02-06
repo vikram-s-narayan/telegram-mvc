@@ -8,6 +8,9 @@ var User = DS.Model.extend({
   posts: DS.hasMany('post'),
   //followers: DS.hasMany('user'),
   //following: DS.hasMany('user'),
+  //need to keep property of follow here and toggle between isTrue if logged
+  //in user follows this user;
+  //isFollowing: true
 
 });
 /*
