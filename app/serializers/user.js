@@ -6,7 +6,8 @@ export default DS.RESTSerializer.extend({
 
     data.meta = {
       operation: record.get('operation'),
-      password: record.get('password')
+      password: record.get('password'),
+      following: record.get('following')
     };
 
     return data;
