@@ -1,7 +1,7 @@
 <div style="float: left; width: 45px;"><img width="40" src="images/jane.jpg"><br></div>
   <div><b>{{#link-to 'user.posts' user.id}}{{user.name}}{{/link-to}}</b></div>
 <div style="margin-left: 500px; padding-bottom: 20px;">
-  {{#if isFollowing}}
+  {{#if isFollowed}}
   <button class="follow_action" {{action 'unfollow'}}> Unfollow </button><br>
   {{else}}
   <button class="follow_action" {{action 'follow'}}> Follow </button><br>

@@ -10,7 +10,7 @@ var User = DS.Model.extend({
   //following: DS.hasMany('user'),
   //need to keep property of follow here and toggle between isTrue if logged
   //in user follows this user;
-  isFollowing: DS.attr('boolean')
+  isFollowed: DS.attr('boolean')
 });
 /*
 User.reopenClass({

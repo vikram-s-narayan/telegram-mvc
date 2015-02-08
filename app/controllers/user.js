@@ -12,7 +12,7 @@ export default Ember.ObjectController.extend({
      user.set('operation', 'follow');
      user.set('following', userToFollow);
      user.save().then(function(){
-      _this.model.set('isFollowing', true); //change isFollowing to isFollowed as it is more intuitive;
+      _this.model.set('isFollowed', true); 
      });
    },
    unfollow: function(){
@@ -20,9 +20,9 @@ export default Ember.ObjectController.extend({
      var _this = this;
      var user = this.get('session.user');
      user.set('operation', 'unfollow');
-     user.set('unfollowing', userToUnfollow); 
+     user.set('unfollowing', userToUnfollow);
      user.save().then(function(){
-       _this.model.set('isFollowing', false);
+       _this.model.set('isFollowed', false);
      });
    }
   }
