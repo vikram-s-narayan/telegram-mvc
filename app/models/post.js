@@ -6,8 +6,6 @@ var Post = DS.Model.extend({
   createdAt: DS.attr('date', {
           defaultValue: function() { return new Date(); }
       }),
-
-
 });
 /*
 Post.reopenClass({
