@@ -6,9 +6,9 @@
     <b>{{name}}</b><br>
   @{{id}}</center><br>
   {{#if isFollowed}}
-  <button class="follow_action" {{action 'unfollow'}}> Unfollow </button><br>
+  <button class="follow_action" {{action 'unfollow' model}}> Unfollow </button><br>
   {{else}}
-  <button class="follow_action" {{action 'follow'}}> Follow </button><br>
+  <button class="follow_action" {{action 'follow' model}}> Follow </button><br>
   {{/if}}
   <div class="page_title">
     {{#link-to 'user.posts'}}Posts{{/link-to}}

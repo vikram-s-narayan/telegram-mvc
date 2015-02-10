@@ -18,10 +18,35 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    follow: function(userToFollow) {
+      alert('follow function called');
+      var user = this.get('session.user');
+
+      user.set('operation', 'follow');
+      user.set('following', userToFollow.get('id'));
+
+      user.save().then(function(){
+        userToFollow.set('isFollowed', true);
+      }, function(response) {
+        alert(response);
+      });
+    },
+
+    unfollow: function(userToUnfollow){
+      //var userToUnfollow = this.model.get('id');
+      //var _this = this;
+      var user = this.get('session.user');
+      user.set('operation', 'unfollow');
+      user.set('unfollowing', userToUnfollow.get('id'));
+      user.save().then(function(){
+        userToUnfollow.set('isFollowed', false);
+      });
+    },
+
     logout: function() {
       console.log('bye!');
       var _this = this;
-      Ember.$.post( "/api/logout", function() {//or search for jquery post
+      Ember.$.post( "/api/logout", function() {
 
         console.log('now setting user session to null');
         _this.set('session.user', null);

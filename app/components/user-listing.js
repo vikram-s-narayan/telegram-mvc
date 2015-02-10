@@ -10,10 +10,25 @@ export default Ember.Component.extend({
   click: function() {
     alert('hi');
     this.sendAction('follow');
-  }*/
+  }
   actions: {
     follow: function() {
       this.sendAction('follow');
     }
   }
+  actions: {
+    follow: function () {
+      console.log('follow component');
+      this.sendAction('follow', this.get('user'));
+    }
+  }
+
+*/
+actions: {
+  follow: function () {
+   console.log('follow component for ', this.get('user'));
+    this.sendAction('follow', this.get('user'));
+
+  }
+}
 });
