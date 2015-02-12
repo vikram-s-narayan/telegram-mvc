@@ -8,7 +8,8 @@ export default DS.RESTSerializer.extend({
       operation: record.get('operation'),
       password: record.get('password'),
       following: record.get('following'),
-      unfollowing: record.get('unfollowing')
+      unfollowing: record.get('unfollowing'),
+      currentUser: record.get('currentUser')
     };
 
     return data;
