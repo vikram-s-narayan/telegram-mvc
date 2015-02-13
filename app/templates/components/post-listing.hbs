@@ -2,7 +2,7 @@
 <div style="border-bottom: solid #ddd 1px;">
   <div style="position: absolute; padding-top: 10px;">
     {{#link-to 'user.posts' post.postCreator.id}}
-    <img width="40" src="images/jane.jpg">
+    <img width="40" {{bind-attr src=post.postCreator.imgUrl}}>
 
   </div>
 

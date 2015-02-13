@@ -1,4 +1,4 @@
-<div style="float: left; width: 45px;"><img width="40" src="images/jane.jpg"><br></div>
+<div style="float: left; width: 45px;"><img width="40" {{bind-attr src=user.imgUrl}}><br></div>
   <div><b>{{#link-to 'user.posts' user.id}}{{user.name}}{{/link-to}}</b></div>
 <div style="margin-left: 500px; padding-bottom: 20px;">
   {{#if isFollowed}}<br>
