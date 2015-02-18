@@ -14,6 +14,7 @@ export default Ember.Controller.extend({
       user.save().then(function(user) {
         _this.transitionToRoute('auth.checkinbox');
     }, function(err){
+      _this.store.unloadAll('user');
       console.log(err);
     });
 }

@@ -19,9 +19,8 @@ export default Ember.Route.extend({
 
   actions: {
     follow: function(userToFollow) {
-      alert('follow function called');
+      console.log('follow function called');
       var user = this.get('session.user');
-
       user.set('operation', 'follow');
       user.set('following', userToFollow.get('id'));
 
@@ -35,6 +34,7 @@ export default Ember.Route.extend({
     unfollow: function(userToUnfollow){
       //var userToUnfollow = this.model.get('id');
       //var _this = this;
+      console.log('unfollow function called');
       var user = this.get('session.user');
       user.set('operation', 'unfollow');
       user.set('unfollowing', userToUnfollow.get('id'));

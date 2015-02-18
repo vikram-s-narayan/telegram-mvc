@@ -1,34 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  /*actions: {
-    follow: function(){
-      alert(this.user.id); //why are we not able to do user.name?
-      //sendAction helper to routes above
-    }
-  }
-  click: function() {
-    alert('hi');
-    this.sendAction('follow');
-  }
-  actions: {
-    follow: function() {
-      this.sendAction('follow');
-    }
-  }
   actions: {
     follow: function () {
-      console.log('follow component');
+     console.log('follow component for ', this.get('user'));
       this.sendAction('follow', this.get('user'));
+    },
+
+    unfollow: function () {
+      console.log('unfollow component for ', this.get('user'));
+      this.sendAction('unfollow', this.get('user'));
     }
   }
-
-*/
-actions: {
-  follow: function () {
-   console.log('follow component for ', this.get('user'));
-    this.sendAction('follow', this.get('user'));
-
-  }
-}
 });

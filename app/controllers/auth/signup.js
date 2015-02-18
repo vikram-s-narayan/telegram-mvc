@@ -26,7 +26,8 @@ var AuthSignupController = Ember.Controller.extend({
           _this.get('session').set('user', user);
           _this.transitionToRoute('/mystream');
           },function(reason) {
-            alert(reason);
+            _this.store.unloadAll('user');
+            console.log(reason);
           });
       }
     }

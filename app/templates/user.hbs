@@ -1,7 +1,8 @@
 {{nav-bar session=session logout="logout"}}
 
 <div>
-  <center><img class="user_img_profile" src="/images/john.jpg"/><br>
+  <center><img class="user_img_profile" {{bind-attr src=imgUrl}}><br>
+
   <center>
     <b>{{name}}</b><br>
   @{{id}}</center><br>

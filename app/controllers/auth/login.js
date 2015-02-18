@@ -21,6 +21,8 @@ var AuthLoginController = Ember.Controller.extend({
         _this.transitionToRoute('/mystream');
       }, function(response) {
         // Handle error
+        console.log("sorry!");
+        _this.store.unloadAll('user');
         console.log(response);
       });
 

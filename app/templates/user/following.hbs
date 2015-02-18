@@ -1,4 +1,3 @@
-
 {{#each 'user' in model}}
-{{user-listing user=user}}<br>
+{{user-listing user=user isFollowed=user.isFollowed follow="follow" unfollow="unfollow"}}<br>
 {{/each}}

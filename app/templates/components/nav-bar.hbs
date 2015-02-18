@@ -15,7 +15,7 @@
 
   <div class="private_top_right">
     {{#link-to "user.posts" session.user.id}}
-      <img class="user_img" src="/images/john.jpg"/>
+      <img class="user_img" {{bind-attr src=session.user.imgUrl}}>
       <div class="top_user_name">{{session.user.name}}<br>
 
       </div>
